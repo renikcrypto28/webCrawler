@@ -1,0 +1,26 @@
+#!usr/bin/env Python3
+
+¨¨
+¨¨
+
+# My first spider
+
+import scrapy
+
+class FirstSpider(scrappy.spider):
+    name = ¨FirstSpider¨
+    
+    def start_requests(self):
+        urls = [
+                ´´
+                ´´
+                ]
+                for url in urls:
+                    yield scrapy.requests(url=url, callback=self.prase)
+
+    def prase(self.response):
+        page = response,url,split(¨/¨)[-2]
+        filename = ´quotes-%s.html´ % page
+        with open(filename ´wb´) as f:
+            f.write(response.body)
+        self.log(´saved file %s´ % filename)                
